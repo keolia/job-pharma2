@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "about": "À propos",
+    "jobs": "Offres d'emploi", 
+    "blog": "Blog",
+    "pricing": "Tarifs",
+    "recruiter": "Espace Recruteur"
+  },
+  "hero": {
+    "title": "Le portail de l'emploi en pharmacie et parapharmacie",
+    "subtitle": "Job-Pharma met en relation les pharmacies, officines et parapharmacies avec les meilleurs talents du secteur partout en France.",
+    "features": {
+      "verified": "Annonces vérifiées et à jour",
+      "sorting": "Tri par localisation, contrat et métier",
+      "highlight": "Mise en avant pour les recruteurs",
+      "application": "Candidature fluide et sécurisée"
+    },
+    "buttons": {
+      "viewJobs": "Voir les offres récentes",
+      "postJob": "Publier une offre"
+    }
+  },
+  "footer": {
+    "description": "Job-board spécialisé dans l'univers des pharmacies & parapharmacies"
+  },
+  "jobs": {
+    "title": "Offres d'emploi en pharmacie",
+    "latestOffers": "3 dernières offres diffusées",
+    "viewAll": "Voir toutes les offres d'emploi",
+    "searchPlaceholder": "Rechercher par titre ou entreprise...",
+    "locationPlaceholder": "Filtrer par ville ou département",
+    "allContracts": "Tous les types de contrat",
+    "results": "{{count}} offre trouvée",
+    "results_plural": "{{count}} offres trouvées",
+    "noResults": "Aucune offre trouvée",
+    "description": "Description du poste",
+    "requirements": "Prérequis",
+    "benefits": "Avantages",
+    "apply": "Postuler",
+    "cv": "CV (PDF, DOC, DOCX)",
+    "uploadCV": "Cliquez ou glissez votre CV ici",
+    "coverLetter": "Lettre de motivation (optionnelle)",
+    "coverLetterPlaceholder": "Présentez-vous et expliquez votre motivation...",
+    "submit": "Envoyer ma candidature",
+    "applicationSent": "Candidature envoyée !",
+    "applicationConfirmation": "Votre CV a été transmis au recruteur."
+  },
+  "common": {
+    "logout": "Se déconnecter"
+  }
+}

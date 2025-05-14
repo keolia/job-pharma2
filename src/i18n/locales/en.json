@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "about": "About",
+    "jobs": "Job Offers",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "recruiter": "Recruiter Area"
+  },
+  "hero": {
+    "title": "The Pharmacy Employment Portal",
+    "subtitle": "Job-Pharma connects pharmacies and drugstores with the best talents in the sector throughout France.",
+    "features": {
+      "verified": "Verified and up-to-date listings",
+      "sorting": "Sort by location, contract and position",
+      "highlight": "Featured listings for recruiters",
+      "application": "Smooth and secure application process"
+    },
+    "buttons": {
+      "viewJobs": "View Recent Offers",
+      "postJob": "Post a Job"
+    }
+  },
+  "footer": {
+    "description": "Specialized job board for pharmacies & drugstores"
+  },
+  "jobs": {
+    "title": "Pharmacy Job Offers",
+    "latestOffers": "3 Latest Job Offers",
+    "viewAll": "View All Job Offers",
+    "searchPlaceholder": "Search by title or company...",
+    "locationPlaceholder": "Filter by city or department",
+    "allContracts": "All contract types",
+    "results": "{{count}} offer found",
+    "results_plural": "{{count}} offers found",
+    "noResults": "No offers found",
+    "description": "Job Description",
+    "requirements": "Requirements",
+    "benefits": "Benefits",
+    "apply": "Apply",
+    "cv": "CV (PDF, DOC, DOCX)",
+    "uploadCV": "Click or drag your CV here",
+    "coverLetter": "Cover Letter (optional)",
+    "coverLetterPlaceholder": "Introduce yourself and explain your motivation...",
+    "submit": "Submit Application",
+    "applicationSent": "Application Sent!",
+    "applicationConfirmation": "Your CV has been sent to the recruiter."
+  },
+  "common": {
+    "logout": "Logout"
+  }
+}

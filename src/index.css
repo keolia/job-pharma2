@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(120deg, #e6ffe6 0%, #b1e3c8 100%);
+  min-height: 100%;
+  color: #233236;
+}
+
+::selection {
+  background: #b7f5cf;
+}
+
+body {
+  background: transparent;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl shadow-md border border-green-100 bg-white mb-6 transition-shadow duration-200;
+  }
+  
+  .card:hover {
+    @apply shadow-lg;
+  }
+  
+  .truncate-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .button {
+    @apply bg-gradient-to-r from-emerald-400 to-green-500 text-white font-semibold rounded-md py-2 px-4 transition-all duration-200 flex items-center justify-center;
+  }
+  
+  .button:hover {
+    @apply from-emerald-500 to-green-600 shadow-md;
+  }
+  
+  .nav-link {
+    @apply transition-colors py-1 px-2 rounded-md text-gray-800 font-medium;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    @apply text-green-600 bg-green-50;
+  }
+  
+  .footer-link:hover {
+    @apply underline;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+    min-height: 400px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-content ul {
+    font-size: 0.85rem;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Ensure content is not cut off on mobile */
+.overflow-visible-mobile {
+  @media (max-width: 768px) {
+    overflow: visible !important;
+    height: auto !important;
+  }
+}

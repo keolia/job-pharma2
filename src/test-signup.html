@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test d'inscription</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .success {
+      background-color: #d1f0e0;
+      color: #0a6e4e;
+    }
+    .error {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test d'inscription</h1>
+  <form id="signupForm" onsubmit="testSignup(event)">
+    <div>
+      <label for="email">Votre adresse email :</label>
+      <input type="email" id="email" required style="width: 100%; padding: 8px; margin: 8px 0;">
+    </div>
+    <button type="submit" style="background: #1abc9c; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
+      Tester l'inscription
+    </button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    async function testSignup(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const resultDiv = document.getElementById('result');
+
+      try {
+        const response = await fetch('https://guodspbfkdihyycgfxon.functions.supabase.co/create-test-user', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd1b2RzcGJma2RpaHl5Y2dmeG9uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUzNTg2MzksImV4cCI6MjA2MDkzNDYzOX0.AaBILqWcxRAc07lu9kHmY5OQ0jImZurumY2iUWgxi70'
+          },
+          body: JSON.stringify({ email })
+        });
+        
+        const data = await response.json();
+        
+        if (data.error) {
+          throw new Error(data.error);
+        }
+
+        resultDiv.className = 'result success';
+        resultDiv.innerHTML = `
+          <h3>✓ Compte test créé avec succès</h3>
+          <p>Un email de confirmation va être envoyé à : ${email}</p>
+          <p>Identifiants de test :</p>
+          <ul>
+            <li>Email : ${email}</li>
+            <li>Mot de passe : test123456</li>
+          </ul>
+        `;
+      } catch (error) {
+        resultDiv.className = 'result error';
+        resultDiv.innerHTML = `
+          <h3>⚠ Erreur</h3>
+          <p>${error.message}</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
