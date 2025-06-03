@@ -7,7 +7,8 @@ export default defineConfig({
     port: 5173,
     host: true,
     hmr: {
-      clientPort: 443
+      clientPort: 443,
+      host: 'localhost'
     }
   },
   preview: {
